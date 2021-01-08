@@ -1,0 +1,38 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ajay_ch7_mj1_RPS {
+    int cricket (int x){
+        int z=0;
+        z=z+x;
+        return z;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random r = new Random();
+        System.out.println("Enter your name");
+        String name = sc.nextLine();
+        int b =r.nextInt(11-1);
+        System.out.println("hit the ball");
+        int a = sc.nextInt();
+        System.out.println("the ball is : "+b);
+        int c=0 ;
+        int d=0;
+        Ajay_ch7_mj1_RPS obj = new Ajay_ch7_mj1_RPS();
+        if (a==b){
+            System.out.println(name + " you are out at " + d + " runs");
+        }
+        while (a!=b){
+            c=obj.cricket(a);
+            d=d+c;
+            System.out.print("hit the ball : ");
+            a=sc.nextInt();
+            System.out.println();
+            b=r.nextInt(11-1);
+            System.out.println("the ball is : "+b);
+        }
+        System.out.println(name + " you are out at " + d + " runs");
+    }
+}
